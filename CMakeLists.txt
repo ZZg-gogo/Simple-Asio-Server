@@ -33,6 +33,9 @@ add_executable(Server ${src} ${base_src})
 # 创建可执行文件
 add_executable(TestThreadPool ${base_src} ../test/ThreadPool.cpp)
 
+# 创建可执行文件
+add_executable(PoolTest ${base_src} ../test/PoolTest.cpp)
+
 if(0)
 
 endif()
