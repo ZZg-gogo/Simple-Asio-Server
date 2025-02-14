@@ -18,7 +18,7 @@ link_directories(
 
 # 源文件设置
 set(base_src
-    # 你的其他源文件，如果有的话
+    ../base/ThreadPool.cpp
 )
 
 set(src
@@ -28,6 +28,10 @@ set(src
 
 # 创建可执行文件
 add_executable(Server ${src} ${base_src})
+
+
+# 创建可执行文件
+add_executable(TestThreadPool ${base_src} ../test/ThreadPool.cpp)
 
 if(0)
 
