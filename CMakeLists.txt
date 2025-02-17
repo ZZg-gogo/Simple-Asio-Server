@@ -19,6 +19,7 @@ link_directories(
 # 源文件设置
 set(base_src
     ../base/ThreadPool.cpp
+    ../base/Buffer.cpp
 )
 
 set(src
@@ -31,13 +32,14 @@ add_executable(Server ${src} ${base_src})
 
 
 # 创建可执行文件
+add_executable(BufferTest ${base_src} ../test/BufferTest.cpp)
+
+if(0)
+# 创建可执行文件
 add_executable(TestThreadPool ${base_src} ../test/ThreadPool.cpp)
 
 # 创建可执行文件
 add_executable(PoolTest ${base_src} ../test/PoolTest.cpp)
-
-if(0)
-
 endif()
 
 
