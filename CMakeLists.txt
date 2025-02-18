@@ -20,7 +20,15 @@ link_directories(
 set(base_src
     ../base/ThreadPool.cpp
     ../base/Buffer.cpp
+    ../base/util.cpp
 )
+
+
+# 源文件设置
+set(net_src
+    ../net/TcpSocket.cpp
+)
+
 
 set(src
     ../main.cpp
@@ -28,11 +36,11 @@ set(src
 
 
 # 创建可执行文件
-add_executable(Server ${src} ${base_src})
+add_executable(Server ${src} ${base_src} ${net_src})
 
 
 # 创建可执行文件
-add_executable(BufferTest ${base_src} ../test/BufferTest.cpp)
+add_executable(TcpSocketTest ${base_src}  ${net_src} ../test/TcpSocketTest.cpp)
 
 if(0)
 # 创建可执行文件
@@ -40,6 +48,9 @@ add_executable(TestThreadPool ${base_src} ../test/ThreadPool.cpp)
 
 # 创建可执行文件
 add_executable(PoolTest ${base_src} ../test/PoolTest.cpp)
+
+# 创建可执行文件
+add_executable(BufferTest ${base_src} ../test/BufferTest.cpp)
 endif()
 
 

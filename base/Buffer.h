@@ -20,6 +20,7 @@ class Buffer
 public:
     typedef std::shared_ptr<Buffer> ptr;
     typedef std::function<void(char *, const std::size_t)> OpFunc;
+    typedef std::function<bool (ptr)> PreFun;
 public:
 
     /**

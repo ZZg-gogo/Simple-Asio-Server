@@ -9,7 +9,7 @@ class Param
 {
 public: 
     typedef std::shared_ptr<Param> ptr;
-    
+
 public:
     Param()
     {
@@ -29,8 +29,9 @@ public:
         type = 0;
         reserve_ = false;
     }
-private:
 
+
+public:
     std::string uniqueId_;
     std::string data_;
     std::string binary_;
